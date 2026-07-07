@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heritage Canvas University Backpack - Modern Heritage Store</title>
+  <!-- Google Fonts: Outfit for Headings, Inter for Body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to content / انتقل إلى المحتوى الأساسي</a>
+
+  <!-- Top Decorative Campus Badge Header -->
+  <header class="store-header">
+    <div class="header-container">
+      <span class="brand-eyebrow">CAMPUS HERITAGE CO.</span>
+      <nav class="store-nav" aria-label="Main navigation">
+        <a href="#" class="nav-link active">Shop / المتجر</a>
+        <a href="#" class="nav-link">Our Story / قصتنا</a>
+        <a href="#" class="nav-link">Sustainability / الاستدامة</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main id="main-content">
+    <article class="product-card">
+      <div class="product-grid">
+        
+        <!-- Left Column: Product Gallery -->
+        <figure class="product-gallery">
+          <div class="image-wrapper">
+            <img id="product-img" src="assets/backpack.jpg" alt="Olive green Heritage Canvas Backpack with leather straps next to textbooks on a library desk" width="600" height="600" loading="eager">
+          </div>
+          <figcaption class="sr-only">Olive green Heritage Canvas Backpack shown in campus setting</figcaption>
+        </figure>
+
+        <!-- Right Column: Product Info & Form -->
+        <div class="product-details">
+          <header class="product-meta">
+            <!-- Accent category tag -->
+            <span class="category-tag">Limited Edition / إصدار محدود</span>
+            
+            <!-- Primary H1 -->
+            <h1>Heritage Canvas University Backpack</h1>
+            
+            <!-- Subtitle description -->
+            <p class="product-tagline">Classic academic style meets rugged outdoor durability.</p>
+            
+            <!-- Rating star bar -->
+            <div class="rating-container" aria-label="4.9 out of 5 stars based on 148 reviews">
+              <div class="stars" aria-hidden="true">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+              <span class="rating-text">4.9 (148 reviews)</span>
+            </div>
+            
+            <!-- Pricing Box -->
+            <div class="price-box">
+              <span class="unit-price-label">Unit Price / سعر الوحدة:</span>
+              <span id="unitPrice" data-price="50">50 دينار</span>
+            </div>
+          </header>
+
+          <section class="product-info-text">
+            <p>
+              Crafted from water-resistant wax-coated cotton canvas and adorned with vegetable-tanned genuine leather straps. Engineered for campus life, featuring a padded 15" laptop sleeve, reinforced base, and heavy-duty brass buckles that age beautifully over time.
+            </p>
+          </section>
+
+          <!-- Interactive Order Form -->
+          <form id="purchaseForm" novalidate>
+            <div class="input-group">
+              <label for="quantity">الكمية / Quantity</label>
+              <div class="input-wrapper">
+                <input type="number" id="quantity" min="1" max="99" value="1" required aria-describedby="quantity-error">
+              </div>
+              <span id="quantity-error" class="error-message" aria-live="assertive"></span>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="button-group">
+              <button type="submit" id="btnCalculate" class="btn btn-primary">Calculate Total / احسب الإجمالي</button>
+              <button type="button" id="btnReset" class="btn btn-secondary">Reset / إعادة تعيين</button>
+            </div>
+          </form>
+
+          <!-- Dynamic Result Box -->
+          <div id="totalDisplay" class="total-display" role="status" aria-live="polite">
+            <!-- Dynamic calculation content will inject here -->
+          </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="store-footer">
+    <div class="footer-container">
+      <p>&copy; 2026 Campus Heritage Co. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
